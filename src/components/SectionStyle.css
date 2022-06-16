@@ -1,0 +1,15 @@
+.section1{
+
+     background-image: url('../img/banner.jpg');
+     background-size:cover;
+     background-repeat: no-repeat;
+     background-color: red;
+     height: 400px;
+     width: 100%;
+
+     color:crimson;
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+}

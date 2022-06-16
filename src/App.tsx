@@ -1,24 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import logo from '../src/img/banner.jpg';
+import Section1 from './components/Section';
 
 function App() {
+
+const [data,setData] = useState([])
+
+function teste(){
+
+
+  console.log(data);
+  
+
+  
+
+       
+    
+  
+}
+
+
+
+const getProd = ()=>{
+  
+  fetch("http://ishopdemo.kinghost.net/leticia/teste111.php")
+  .then((response)=>response.json())
+  .then((responseJson)=> (setData(responseJson)))
+ 
+}
+
+useEffect(()=>{
+ 
+  getProd();
+ 
+},[])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div > 
+         <h1>Listar</h1>
+         <ul>
+          <button onClick={()=> teste()}>TESTE</button>
+          {
+               
+                
+          }
+
+         </ul>
+       
     </div>
   );
 }
